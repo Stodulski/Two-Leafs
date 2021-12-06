@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="/public/css/normalize.css" />
+        <link rel="stylesheet" href="/public/css/signup.css" />
+        <link rel="stylesheet" href="/public/css/header.css" />
+        <link rel="stylesheet" href="/public/css/footer.css" />
+        <link rel="stylesheet" href="/public/css/alert.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Dosis:wght@500&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            rel="shortcut icon"
+            href="/public/img/favicon.ico"
+            type="image/x-icon"
+        />
+        <title>Two Leafs</title>
+    </head>
+
+    <body>
+        <%- include('./partials/header.ejs') %>
+        <main class="main__container">
+            <form
+                action="/account/register"
+                method="post"
+                class="form__container"
+            >
+                <h2 class="form__title">Registro</h2>
+                <div class="name__container">
+                    <input
+                        type="text"
+                        class="form__name"
+                        name="username"
+                        placeholder="Usuario"
+                    />
+                    <input
+                        type="text"
+                        class="form__surname"
+                        name="name"
+                        placeholder="Nombre"
+                    />
+                </div>
+                <input
+                    type="email"
+                    name="email"
+                    class="form__email"
+                    placeholder="Email"
+                />
+                <input
+                    type="password"
+                    name="password"
+                    class="form__password"
+                    placeholder="Contraseña"
+                />
+                <div class="footer-signup">
+                    <input type="submit" value="Entrar" class="form__submit" />
+                    <%- include('./partials/alert.ejs') %>
+                </div>
+                <span class="form__account"
+                    >¿Tienes cuenta?
+                    <a href="/account/login" class="account__link"
+                        >Click aqui</a
+                    ></span
+                >
+            </form>
+        </main>
+
+        <%- include('./partials/footer.ejs') %>
+        <script src="/public/js/jquery.js"></script>
+        <script src="/public/js/menu.js"></script>
+        <script src="/public/js/signup.js"></script>
+    </body>
+</html>

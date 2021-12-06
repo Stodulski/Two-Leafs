@@ -1,0 +1,20 @@
+@import url(./variables.css);
+
+.error {
+    font-family: "Dosis", sans-serif;
+    font-size: 10vmin;
+    width: 100%;
+    transform: translateY(10vmin);
+    height: calc(100vh - 10vmin);
+    background: rgb(245, 245, 245);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@media (max-width: 650px) {
+    .error {
+        transform: translateY(15vmin);
+        height: calc(100vh - 15vmin);
+        font-size: 13vmin;
+    }
+}

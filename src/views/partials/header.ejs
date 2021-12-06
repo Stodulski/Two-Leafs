@@ -1,0 +1,34 @@
+<header class="header__container">
+    <img
+        src="/public/img/logo.svg"
+        alt="Logo de Two leafs"
+        class="header__logo"
+    />
+    <% if(typeof login != 'undefined'){%>
+    <div class="search__div">
+        <input type="text" placeholder="Buscar" class="search__input">
+        <div class="search__find" id="result">
+            
+        </div>
+    </div>
+    <img src="/public/img/menu.svg" alt="Icono del menu" class="header__menu" />
+    <%}%>
+</header>
+<% if(typeof login != 'undefined'){%>
+<nav class="menu">
+    <ul class="nav__container">
+        <a href="/" class="nav__item">
+            <li>Inicio</li>
+        </a>
+        <a
+            href="/<% if(typeof myUsername != 'undefined'){ %><%= myUsername %><% } %>"
+            class="nav__item"
+        >
+            <li>Mi perfil</li>
+        </a>
+        <a href="/account/logout" class="nav__item">
+            <li>Cerrar sesion</li>
+        </a>
+    </ul>
+</nav>
+<%}%>

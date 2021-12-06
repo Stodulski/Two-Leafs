@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="/public/css/normalize.css" />
+        <link rel="stylesheet" href="/public/css/profile.css" />
+        <link rel="stylesheet" href="/public/css/header.css" />
+        <link rel="stylesheet" href="/public/css/footer.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Dosis:wght@500&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            rel="shortcut icon"
+            href="/public/img/favicon.ico"
+            type="image/x-icon"
+        />
+        <title>Two Leafs</title>
+    </head>
+
+    <body>
+        <%- include('./partials/header.ejs') %>
+
+        <main class="main__container">
+            <div class="profile">
+                <%if(myAcc === true){%>
+                <form
+                    class="card__container"
+                    action="/edit/profile/img"
+                    method="post"
+                    enctype="multipart/form-data"
+                >
+                    <label class="label">
+                        <input
+                            type="file"
+                            name="image"
+                            hidden
+                            accept="image/jpg, image/png, image/jpeg"
+                            class="file"
+                        />
+                        <div class="img__div">
+                            <img
+                                src="/public/uploads/<%= imgUrl %>"
+                                alt="<%= username %>"
+                                class="profile__image"
+                            />
+                            <img
+                                src="/public/img/edit.png"
+                                alt="Icono para editar"
+                                class="edit"
+                            />
+                        </div>
+                        <h2 class="profile__name"><%= name %></h2>
+                    </label>
+                    <div class="user__data">
+                        
+                        <div class="data">
+                            <span>Seguidores</span>
+                            <span><%= followers %></span>
+                        </div>
+                        <div class="data">
+                            <span>Seguidos</span>
+                            <span><%= followed %></span>
+                        </div>
+                    </div>
+                </form>
+                <%}else{%>
+                <div class="card__container">
+                    <img
+                        src="/public/uploads/<%= imgUrl %>"
+                        alt="<%= username %>"
+                        class="profile__image"
+                    />
+                    <h2 class="profile__name"><%= name %></h2>
+                    <div class="user__data">
+                        
+                        <div class="data">
+                            <span>Seguidores</span>
+                            <span><%= followers %></span>
+                        </div>
+                        <button type="button" class="data__follow">Seguir</button>
+                        <div class="data">
+                            <span>Seguidos</span>
+                            <span><%= followed %></span>
+                        </div>
+                    </div>
+                </div>
+                <%}%>
+            </div>
+            <div class="posts__container"></div>
+        </main>
+
+        <%- include('./partials/footer.ejs') %>
+        <script src="/public/js/jquery.js"></script>
+        <script src="/public/js/menu.js"></script>
+        <script src="/public/js/profile.js"></script>
+    </body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="/public/css/normalize.css" />
+        <link rel="stylesheet" href="/public/css/home.css" />
+        <link rel="stylesheet" href="/public/css/header.css" />
+        <link rel="stylesheet" href="/public/css/footer.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Dosis:wght@500&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            rel="shortcut icon"
+            href="/public/img/favicon.ico"
+            type="image/x-icon"
+        />
+        <title>Two Leafs</title>
+    </head>
+
+    <body>
+        <%- include('./partials/header.ejs') %>
+
+        <main class="main__container">
+            <form
+                action="/new/post"
+                method="post"
+                class="form__container"
+                enctype="multipart/form-data"
+            >
+                <span class="form__title">¡Sube una publicacion!</span>
+                <label class="form__file">
+                    <input
+                        type="file"
+                        name="image"
+                        class="file"
+                        accept="image/jpg, image/png, image/jpeg"
+                        hidden
+                    />
+                    <span class="file__help">Seleccione una imagen</span>
+                </label>
+                <input type="submit" class="form__submit" />
+            </form>
+            <div class="posts__container"></div>
+        </main>
+
+        <%- include('./partials/footer.ejs') %>
+        <script src="./public/js/jquery.js"></script>
+        <script src="/public/js/menu.js"></script>
+        <script src="/public/js/home.js"></script>
+    </body>
+</html>

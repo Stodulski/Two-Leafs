@@ -1,0 +1,48 @@
+{
+    "name": "two-leafs",
+    "version": "1.2.0",
+    "description": "Red social",
+    "main": "src/app.js",
+
+    "scripts": {
+        "dev": "nodemon babel-node src/app.js",
+        "start": "node dist/app.js",
+        "compile": "babel src -d dist",
+        "copyfiles": "ncp src/views dist/views && ncp src/public dist/public",
+        "clean": "rimraf dist",
+        "cache": "npm cache clean --force",
+        "build": "npm run clean && npm run compile && npm run copyfiles && npm run cache"
+    },
+    "engines": {
+        "node": "16.13.0"
+    },
+    "author": "Maximo Stodulski",
+    "license": "ISC",
+    "dependencies": {
+        "@babel/runtime": "^7.16.3",
+        "bcrypt": "^5.0.1",
+        "connect-flash": "^0.1.1",
+        "cors": "^2.8.5",
+        "ejs": "^3.1.6",
+        "express": "^4.17.1",
+        "express-session": "^1.17.2",
+        "fs-extra": "^10.0.0",
+        "helmet": "^4.6.0",
+        "mongoose": "^6.0.13",
+        "morgan": "^1.10.0",
+        "multer": "^1.4.3",
+        "node-pre-gyp": "^0.17.0",
+        "passport": "^0.5.0",
+        "passport-local": "^1.0.0",
+        "sharp": "^0.29.3"
+    },
+    "devDependencies": {
+        "@babel/cli": "^7.16.0",
+        "@babel/core": "^7.16.0",
+        "@babel/node": "^7.16.0",
+        "@babel/plugin-transform-runtime": "^7.16.4",
+        "@babel/preset-env": "^7.16.4",
+        "ncp": "^2.0.0",
+        "nodemon": "^2.0.15"
+    }
+}

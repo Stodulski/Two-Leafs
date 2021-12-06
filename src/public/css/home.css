@@ -1,0 +1,178 @@
+@import url(./variables.css);
+
+* {
+    font-family: "Dosis", sans-serif;
+    font-weight: 400;
+}
+
+.post__delete{
+    width: 5vmin;
+    height: auto;
+   transform: translateX(500%);
+   cursor: pointer;
+}
+.main__container {
+    transform: translateY(10vmin);
+    min-height: calc(100vh - 10vmin);
+    background: rgb(245, 245, 245);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.form__container {
+    width: 60vmin;
+    height: 50vmin;
+    background: #fff;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 2vmin;
+    box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
+    margin: 10vmin 0;
+}
+.form__submit {
+    width: 90%;
+    height: 5.5vmin;
+    border: none;
+    background: var(--first-color);
+    cursor: not-allowed;
+    font-size: 2.75vmin;
+}
+.form__title {
+    font-size: 3.5vmin;
+}
+.form__file {
+    width: 90%;
+    font-size: 2.5vmin;
+    text-align: center;
+    height: 20vmin;
+    background: var(--second-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.post__container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.post {
+    min-height: 60vmin;
+    width: 60vmin;
+    height: auto;
+    border-radius: 2vmin;
+    box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
+    background: #fff;
+    margin-bottom: 10vmin;
+}
+.post__header {
+    width: 100%;
+    height: 15vmin;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.profile__img {
+    width: 10vmin;
+    height: 10vmin;
+    object-fit: cover;
+    border-radius: 5vmin;
+    margin: 0 3vmin;
+}
+.profile__title {
+    font-size: 3vmin;
+}
+.profile__title a {
+    color: #000;
+    text-decoration: none;
+}
+.post__img {
+    background-color: #fff;
+    object-fit: cover;
+    min-height: 60vmin;
+    width: 60vmin;
+    height: auto;
+}
+.post__footer {
+    width: 60vmin;
+    height: 10vmin;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.like__button {
+    margin: 0 2vmin;
+    width: 5vmin;
+    cursor: pointer;
+    user-select: none;
+}
+.like__number {
+    transform: translateX(38vmin);
+    font-size: 2.5vmin;
+}
+
+@media (max-width: 650px) {
+    .post__delete{
+        width: 8vmin;
+        transform: translateX(600%);
+    }
+    .main__container {
+        transform: translateY(15vmin);
+        min-height: calc(100vh - 15vmin);
+    }
+    .form__container {
+        width: 100%;
+        border-radius: 0;
+    }
+    .form__title {
+        font-size: 5vmin;
+    }
+    .form__file {
+        font-size: 4vmin;
+    }
+    .form__submit {
+        height: 8vmin;
+        font-size: 4.25vmin;
+    }
+    .post,
+    .post__header,
+    .post__footer,
+    .post__img {
+        width: 100%;
+    }
+    .post {
+        border-radius: 0;
+    }
+    .post__header {
+        height: 20vmin;
+    }
+    .post__footer {
+        width: 100vw;
+        height: 15vmin;
+        justify-content: space-between;
+    }
+    .profile__title {
+        font-size: 5vmin;
+    }
+    .profile__img {
+        height: 15vmin;
+        width: 15vmin;
+        border-radius: calc(15vmin / 2);
+    }
+    .like__button {
+        width: 8vmin;
+        margin: 0 3vmin;
+    }
+    .like__number {
+        font-size: 4.25vmin;
+        transform: unset;
+        margin: 0 3vmin;
+    }
+}

@@ -1,0 +1,146 @@
+.header__container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10vmin;
+    background: var(--first-color);
+    box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
+    position: fixed;
+    z-index:1000;
+}
+
+.search__div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: "Dosis", sans-serif;
+    font-weight: 400;
+}
+.search__input{
+    width: calc(60vmin - 2vmin);
+    padding: 0 1vmin ;
+    height: 6vmin;
+    font-size: 2vmin;
+    outline: none;
+    border: none;
+}
+.search__find{
+    position: absolute;
+    top: 0;
+    transform: translateY(10vmin);
+    background-color:var(--second-color);
+    width: 60vmin;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.find__item{
+    font-size: 2vmin;   
+    height: 6.25vmin;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: var(--second-color);
+    color: #000;
+    text-decoration: none;
+    
+}
+.find__item:hover{
+    background-color: var(--first-color);
+}
+.header__logo,
+.header__menu {
+    width: auto;
+    height: 8vmin;
+    margin: 1vmin;
+}
+.header__menu {
+    cursor: pointer;
+}
+
+.header__logo {
+    cursor: pointer;
+}
+
+.menu {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    position: fixed;
+    right: 0;
+    z-index: 2;
+    font-family: "Dosis", sans-serif;
+    font-weight: 400;
+    transform: translateY(10vmin);
+}
+
+.nav__container {
+    background: var(--second-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.nav__item {
+    width: calc(100%);
+    background: var(--second-color);
+    color: #000;
+    width: 40vmin;
+    height: 10vmin;
+    text-decoration: none;
+    font-size: 2.5vmin;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav__item:hover {
+    background: var(--first-color);
+}
+
+@media (max-width: 650px) {
+    .search__div{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        font-family: "Dosis", sans-serif;
+        font-weight: 400;
+    }
+    .search__input{
+        width: calc(65vmin - 2vmin);
+        height: 11vmin;
+        font-size: 4vmin;
+    }
+    .search__find{
+        width: 100%;
+        transform: translateY(15vmin);
+    }
+    .find__item{
+    
+        font-size: 5vmin;   
+        height: 15vmin;
+        
+    }
+
+    .header__container {
+        height: 15vmin;
+    }
+    .header__logo,
+    .header__menu {
+        height: 11vmin;
+    }
+    .nav__item {
+        width: 100vw;
+        height: 15vmin;
+        font-size: 3.5vmin;
+    }
+    .menu{
+        transform: translateY(15vmin);
+    }
+}

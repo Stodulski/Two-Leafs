@@ -1,0 +1,30 @@
+.alert__container {
+    font-family: "Dosis", sans-serif;
+    font-weight: 400;
+    width: calc(100% - 22.5vmin);
+    background-color: rgba(255, 0, 0, 0.597);
+    margin-right: 5vmin;
+    height: 5vmin;
+    margin-top: 2vmin;
+    border-radius: 0.5vmin;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.alert {
+    font-size: 2.2vmin;
+
+}
+
+
+@media (max-width: 650px) {
+    .alert__container{
+        height: 10vmin;
+        margin-top: 4vmin;
+        border-radius: 2vmin;
+    }
+    .alert {
+        font-size: 3.5vmin;
+    }
+}

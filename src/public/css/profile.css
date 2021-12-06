@@ -1,0 +1,237 @@
+@import url(./variables.css);
+
+* {
+    font-family: "Dosis", sans-serif;
+    font-weight: 400;
+}
+
+.user__data{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+}
+.data{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 3.5vmin;
+    font-size: 2.5vmin;
+    width: 33%;
+}
+.data__follow{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5vmin;
+    padding: .5vmin 1.25vmin;
+    transform: translateY(1.5vmin);
+    width: 33%;
+}
+.profile{
+    margin-bottom: 10vmin;
+    margin-top: 10vmin;
+}
+.label {
+    cursor: pointer;
+}
+.img__div{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+.edit {
+    display: none;
+    width: 7vmin;
+    height: 7vmin;
+    object-fit: cover;
+    position: absolute;
+    right: 0;
+    left: 0;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.card__container {
+    box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
+    background: #fff;
+    width: 60vmin;
+    height: 40vmin;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 2vmin;
+}
+.main__container {
+    transform: translateY(10vmin);
+    min-height: calc(100vh - 10vmin);
+    width: 100%;
+    background: rgb(245, 245, 245);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.profile__image {
+    width: 15vmin;
+    height: 15vmin;
+    object-fit: cover;
+    border-radius: 7.5vmin;
+    border: #000 solid 0.5vmin;
+    background-color: #000;
+}
+.profile__name {
+    margin-top: 3.5vmin;
+    font-size: 3vmin;
+    text-align: center;
+}
+
+.post__delete{
+    width: 5vmin;
+    height: auto;
+   transform: translateX(500%);
+   cursor: pointer;
+}
+
+.post__container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.post {
+    min-height: 60vmin;
+    width: 60vmin;
+    height: auto;
+    border-radius: 2vmin;
+    box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
+    background: #fff;
+    margin-bottom: 10vmin;
+}
+.post__header {
+    width: 100%;
+    height: 15vmin;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.profile__img {
+    width: 10vmin;
+    height: 10vmin;
+    object-fit: cover;
+    border-radius: 5vmin;
+    margin: 0 3vmin;
+}
+.profile__title {
+    font-size: 3vmin;
+}
+.profile__title a {
+    color: #000;
+    text-decoration: none;
+}
+.post__img {
+    background-color: #fff;
+    object-fit: cover;
+    min-height: 60vmin;
+    width: 60vmin;
+    height: auto;
+}
+.post__footer {
+    width: 60vmin;
+    height: 10vmin;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.like__button {
+    margin: 0 2vmin;
+    width: 5vmin;
+    cursor: pointer;
+    user-select: none;
+}
+.like__number {
+    transform: translateX(38vmin);
+    font-size: 2.5vmin;
+}
+
+@media (max-width: 650px) {
+    .data__follow{
+        order: 3;
+        font-size: 4vmin;
+        padding: .5vmin 3vmin;
+        transform: translateY(3vmin);
+    }
+    .data{
+        font-size: 5vmin;
+    }
+    .user__data{
+        flex-direction: column;
+        width: 100vw;
+    }
+    .card__container {
+        width: 100%;
+        background: none;
+        box-shadow: none;
+        height: auto;
+    }
+    .main__container {
+        transform: translateY(15vmin);
+        height: calc(100vh - 15vmin);
+    }
+    .profile__img {
+        width: 30vmin;
+        height: 30vmin;
+        border-radius: 15vmin;
+    }
+    .profile__name {
+        font-size: 6vmin;
+    }
+    .edit {
+        width: 15vmin;
+        height: 15vmin;
+    }
+
+    .post__delete{
+        width: 8vmin;
+        transform: translateX(600%);
+    }
+    .post,
+    .post__header,
+    .post__footer,
+    .post__img {
+        width: 100%;
+    }
+    .post {
+        border-radius: 0;
+    }
+    .post__header {
+        height: 20vmin;
+    }
+    .post__footer {
+        width: 100vw;
+        height: 15vmin;
+        justify-content: space-between;
+    }
+    .profile__title {
+        font-size: 5vmin;
+    }
+    .profile__img {
+        height: 15vmin;
+        width: 15vmin;
+        border-radius: calc(15vmin / 2);
+    }
+    .like__button {
+        width: 8vmin;
+        margin: 0 3vmin;
+    }
+    .like__number {
+        font-size: 4.25vmin;
+        transform: unset;
+        margin: 0 3vmin;
+    }
+}
